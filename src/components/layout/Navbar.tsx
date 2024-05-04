@@ -3,15 +3,17 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
 import { FaTimes } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 function Navbar() {
   const [navIcon, setNavIcon] = useState(true);
+  const location = useLocation();
   const activeLink =
     "border-b border-[#F9BF29] text-white opacity-100 px-3 mx-2";
   const link =
     "opacity-60 px-3 text-white hover:text-white hover:border-b hover:border-[#F9BF29] hover:opacity-100  mx-2";
 
+    console.log(location.pathname)
   return (
     <nav className="bg-[#3B5D50] w-full fixed top-0 z-10 ">
       <div className="max-w-[1140px] m-auto flex justify-between items-center px-4 sm:px-5 py-3 ">
@@ -80,11 +82,11 @@ function Navbar() {
             <div className="relative pt-2 sm:pt-0 mr-1 sm:mr-5 p-1 cursor-pointer">
               <AiOutlineShoppingCart
                 size={30}
-                // className={
-                //   pathname.startsWith("/cart")
-                //     ? "text-black p-1 opacity-60 bg-[white] border rounded-[5px]"
-                //     : "text-[white] hover:text-black p-1 hover:opacity-60 hover:bg-[white] hover:border hover:rounded-[5px]"
-                // }
+                className={
+                  location.pathname == '/cart'
+                    ? "text-black p-1 opacity-60 bg-[white] border rounded-[5px]"
+                    : "text-[white] hover:text-black p-1 hover:opacity-60 hover:bg-[white] hover:border hover:rounded-[5px]"
+                }
               />
               <div className="top-[3px] right-[8px] absolute text-[5px] border-green-900 border text-white bg-green-900 rounded-[50%]">
                 2

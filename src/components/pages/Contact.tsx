@@ -1,12 +1,10 @@
-import React from "react";
-import { RxEnvelopeClosed } from "react-icons/rx";
 import { PiNavigationArrowFill } from "react-icons/pi";
 import { ImPhone } from "react-icons/im";
 import { FaEnvelope } from "react-icons/fa";
 
 function Contact() {
   return (
-    <div className="flex w-full h-[100vh] m-0 p-0">
+    <div className="flex w-full h-[100vh]">
       <div className="w-[50%] hidden lg:block">
         <img
           alt="search"

@@ -27,7 +27,7 @@ const Product = () => {
   console.log(products);
 
   return (
-    <div className="py-10 pt-10 border border-black">
+    <div className="py-10 pt-10 ">
       <div className="max-w-[1140px] m-auto w-full py-5 px-4 :sm:px-5">
         <h1 className="text-zinc-800 text-[25px] font-semibold">
           Our Products
