@@ -1,5 +1,5 @@
-import { useSelector, useDispatch } from "react-redux";
-import type { RootState, AppDispatch } from "../../redux/store/store";
+import { useSelector } from "react-redux";
+import type { RootState } from "../../redux/store/store";
 
 function Cart() {
   const { cartItems } = useSelector((state: RootState) => state.cart);
