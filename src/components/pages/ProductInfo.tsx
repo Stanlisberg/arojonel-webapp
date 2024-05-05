@@ -19,7 +19,7 @@ function ProductInfo() {
     desc: string;
   }
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screeng">
       {products
         .filter((data: ProductType) => data.title === productId)
         .map((data, index) => {
