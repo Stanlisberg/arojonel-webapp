@@ -9,9 +9,9 @@ function Navbar() {
   const [navIcon, setNavIcon] = useState(true);
   const location = useLocation();
   const activeLink =
-    "border-b border-[#F9BF29] text-white opacity-100 px-3 mx-2";
+    "border-b border-[#F9BF29] text-white opacity-100 px-3 py-1 mx-2";
   const link =
-    "opacity-60 px-3 text-white hover:text-white hover:border-b hover:border-[#F9BF29] hover:opacity-100  mx-2";
+    "opacity-60 px-3 py-1 text-white hover:text-white hover:border-b hover:border-[#F9BF29] hover:opacity-100  mx-2";
 
     console.log(location.pathname)
   return (

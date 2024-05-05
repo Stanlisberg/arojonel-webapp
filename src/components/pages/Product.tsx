@@ -5,7 +5,7 @@ import { AppDispatch } from "../../redux/store/store";
 import { addToCart } from "../../redux/cartSlice";
 import { products } from "../../utils/data";
 import Footer from "../layout/Footer";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   const [show, setShow] = useState(8);
@@ -49,7 +49,7 @@ const Product = () => {
         <div className="max-w-[1140px] m-auto w-full gap-4 pb-4 px-4 sm:px-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
           {products?.slice(0, show).map((product, index) => (
             <div key={index} className="">
-              {/* <Link href={`product/${product.id}`}> */}
+              <Link to={`/product/${product.title}`}>
               <div className="">
                 <img
                   alt="search"
@@ -60,7 +60,7 @@ const Product = () => {
                   onClick={() => console.log(product.id)}
                 />
               </div>
-              {/* </Link> */}
+              </Link>
               <div
                 className="flex justify-center items-center border text-[15px] border-black py-1 mx-2 my-5 cursor-pointer bg-[#3B5D50] hover:opacity-80 text-white rounded-[5px]"
                 onClick={() => handleAddToCart(product)}
