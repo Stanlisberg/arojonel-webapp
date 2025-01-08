@@ -5,7 +5,7 @@ import { FaEnvelope } from "react-icons/fa";
 function Contact() {
   return (
     <div className="flex flex-row-reverse w-full">
-      <div className="w-[50%] h-full hidden lg:block border border-black">
+      <div className="w-[50%] hidden lg:block border border-black">
         <img
           alt="search"
           height="20"
@@ -14,9 +14,11 @@ function Contact() {
           width="500"
         />
       </div>
-      <div className="w-full lg:w-[50%] h-[100vh] flex items-center justify-center">
-        <div className=" h-[100vh] pt-10 w-full mx-4 sm:mx-10 ">
-          <h1 className="text-[40px] font-[200] my-10">How Can We Help?</h1>
+      <div className="flex items-center justify-center">
+        <div className="h-screen pt-20 md:pt-0 w-full mx-4 sm:mx-10">
+          <h1 className="text-[40px] font-[200] my-10 md:mb-5">
+            How Can We Help?
+          </h1>
           <form className="flex flex-col p-0 w-full gap-10 ">
             <div className="flex flex-col sm:flex-row sm:justify-between w-[100%] mt-1">
               <div className="flex-col flex w-full sm:w-[50%]">
@@ -40,14 +42,19 @@ function Contact() {
                 />
               </div>
             </div>
-            <div className="flex flex-col w-[100%] mt-10">
+            <div className="flex flex-col w-[100%] mt-1 md:mt-10">
               <label htmlFor="username" className="text-[#6A6A6A] font-[600]">
                 Message
               </label>
-              <textarea
+              <input
+                type="name"
+                placeholder="Hi, Customer. Let's hear from you.."
+                className="border-b outline-none border-black w-full mt-2 text-[13px] placeholder:text-[13px]"
+              />
+              {/* <textarea
                 placeholder="Hi, Customer. Let's hear from you.."
                 className="h-[200px] border outline-none border-black mt-2 text-[13px] placeholder:text-[13px] "
-              ></textarea>
+              ></textarea> */}
             </div>
           </form>
           <div className="flex flex-col-reverse sm:flex-row w-full mt-5">
@@ -90,7 +97,9 @@ function Contact() {
               />
             </div>
           </div>
-          <button className='border mb-5 px-10 py-2 w-full rounded-[5px] mt-10 bg-[#3B5D50] text-white hover:scale-90 ease-in-out duration-300'>send</button>
+          <button className="border mb-5 px-10 py-2 w-full rounded-[5px] mt-1 md:mt-10 bg-[#3B5D50] text-white hover:scale-90 ease-in-out duration-300">
+            send
+          </button>
         </div>
       </div>
     </div>

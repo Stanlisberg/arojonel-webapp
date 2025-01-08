@@ -13,7 +13,7 @@ function Navbar() {
   const link =
     "opacity-60 px-3 py-1 text-white hover:text-white hover:border-b hover:border-[#F9BF29] hover:opacity-100  mx-2";
 
-    console.log(location.pathname)
+  console.log(location.pathname);
   return (
     <nav className="bg-[#3B5D50] w-full fixed top-0 z-10 ">
       <div className="max-w-[1140px] m-auto flex justify-between items-center px-4 sm:px-5 py-3 ">
@@ -83,7 +83,7 @@ function Navbar() {
               <AiOutlineShoppingCart
                 size={30}
                 className={
-                  location.pathname == '/cart'
+                  location.pathname == "/cart"
                     ? "text-black p-1 opacity-60 bg-[white] border rounded-[5px]"
                     : "text-[white] hover:text-black p-1 hover:opacity-60 hover:bg-[white] hover:border hover:rounded-[5px]"
                 }
@@ -111,29 +111,46 @@ function Navbar() {
           <div
             className={
               navIcon === false
-                ? " fixed overflow-y-hidden md:hidden flex flex-col ease-in duration-700 top-[61px] left-0 w-full h-full px-4 py-7 bg-[#fff] z-10 "
+                ? " fixed overflow-y-hidden md:hidden flex flex-col ease-in duration-700 top-[61px] left-0 w-full h-full px-4 py-7 bg-[#4e7866] z-10 "
                 : "  fixed top-40 h-full left-[-100%] ease-in duration-700"
             }
           >
-            <div className="w-full p-4">
-              {/* {navLinks.map((link, index) => {
-              
-                return (
-                  <Link>
-                    <li
-                      className={
-                        isActive
-                          ? "text-[indigo] border-b border-[indigo] py-6 cursor-pointer list-none"
-                          : "border-b border-[black] py-6 cursor-pointer text-[black] list-none"
-                      }
-                      onClick={() => setNavIcon(!navIcon)}
-                    >
-                      {link.name}
-                    </li>
-                  </Link>
-                );
-              })} */}
-            </div>
+            <ul className="w-full p-4">
+              <li
+                className="border-b py-6 cursor-pointer text-white"
+                onClick={() => setNavIcon(!navIcon)}
+              >
+                <Link to="/">Home</Link>
+              </li>
+
+              <li
+                className="border-b py-6 cursor-pointer text-white"
+                onClick={() => setNavIcon(!navIcon)}
+              >
+                <Link to="/about">About</Link>
+              </li>
+
+              <li
+                className="border-b py-6 cursor-pointer text-white"
+                onClick={() => setNavIcon(!navIcon)}
+              >
+                <Link to="/contact">Contact</Link>
+              </li>
+
+              <li
+                className="border-b py-6 cursor-pointer text-white"
+                onClick={() => setNavIcon(!navIcon)}
+              >
+                <Link to="/product">Product</Link>
+              </li>
+
+              <li
+                className="border-b py-6 cursor-pointer text-white"
+                onClick={() => setNavIcon(!navIcon)}
+              >
+                <Link to="/cart">Cart</Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
